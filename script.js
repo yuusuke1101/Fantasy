@@ -62,6 +62,6 @@ function generateCharacter() {
     `;
 
     outputDiv.innerHTML = output;
-    outputDiv.style.display = "block";
+    outputDiv.style.display = "block"; // Pastikan elemen terlihat
     outputDiv.classList.add("animate__fadeIn"); // Menambahkan animasi fade-in saat hasil muncul
 }
