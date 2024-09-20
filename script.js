@@ -41,23 +41,27 @@ function generateCharacter() {
     const agility = getRandomNumber(10, 100);
     const selectedSkills = getRandomSkills(skills, getRandomNumber(2, 5)); // Mendapatkan 2 hingga 5 skill
 
-    // Menampilkan deskripsi karakter
+    // Menampilkan deskripsi karakter dengan animasi
+    const outputDiv = document.getElementById('output');
     const output = `
-        <h2>Nama: ${name}</h2>
-        <p><strong>Ras:</strong> ${race}</p>
-        <p><strong>Level:</strong> ${level}</p>
-        <p><strong>Guild:</strong> ${guild}</p>
-        <h3>Atribut Kekuatan:</h3>
-        <ul>
+        <h2 class="animate__animated animate__fadeInDown">Nama: ${name}</h2>
+        <p class="animate__animated animate__fadeInUp"><strong>Ras:</strong> ${race}</p>
+        <p class="animate__animated animate__fadeInUp"><strong>Level:</strong> ${level}</p>
+        <p class="animate__animated animate__fadeInUp"><strong>Guild:</strong> ${guild}</p>
+        <h3 class="animate__animated animate__fadeInUp">Atribut Kekuatan:</h3>
+        <ul class="animate__animated animate__fadeInUp">
             <li><strong>Strength:</strong> ${strength}/100</li>
             <li><strong>Mana:</strong> ${mana}/100</li>
             <li><strong>Health:</strong> ${health}/100</li>
             <li><strong>Agility:</strong> ${agility}/100</li>
         </ul>
-        <h3>Skill Fantasi:</h3>
-        <ul>
+        <h3 class="animate__animated animate__fadeInUp">Skill Fantasi:</h3>
+        <ul class="animate__animated animate__fadeInUp">
             ${selectedSkills.map(skill => `<li>${skill}</li>`).join('')}
         </ul>
     `;
-    document.getElementById('output').innerHTML = output;
+
+    outputDiv.innerHTML = output;
+    outputDiv.style.display = "block";
+    outputDiv.classList.add("animate__fadeIn"); // Menambahkan animasi fade-in saat hasil muncul
 }
