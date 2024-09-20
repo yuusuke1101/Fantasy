@@ -44,15 +44,15 @@ function generateCharacter() {
     // Menampilkan deskripsi karakter
     const output = `
         <h2>Nama: ${name}</h2>
-        <p>Ras: ${race}</p>
-        <p>Level: ${level}</p>
-        <p>Guild: ${guild}</p>
+        <p><strong>Ras:</strong> ${race}</p>
+        <p><strong>Level:</strong> ${level}</p>
+        <p><strong>Guild:</strong> ${guild}</p>
         <h3>Atribut Kekuatan:</h3>
         <ul>
-            <li>Strength: ${strength}/100</li>
-            <li>Mana: ${mana}/100</li>
-            <li>Health: ${health}/100</li>
-            <li>Agility: ${agility}/100</li>
+            <li><strong>Strength:</strong> ${strength}/100</li>
+            <li><strong>Mana:</strong> ${mana}/100</li>
+            <li><strong>Health:</strong> ${health}/100</li>
+            <li><strong>Agility:</strong> ${agility}/100</li>
         </ul>
         <h3>Skill Fantasi:</h3>
         <ul>
